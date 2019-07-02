@@ -1,0 +1,133 @@
+{
+	"variables": [],
+	"info": {
+		"name": "APITest",
+		"_postman_id": "24ed8e81-994b-04af-7d3b-74e187962586",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/?date=19/02/1982&title=Manon Niazi9&sortBy=date&sortType=desc",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/api/?date=19/02/1982&title=Manon Niazi9&sortBy=date&sortType=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "19/02/1982",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "title",
+							"value": "Manon Niazi9",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sortBy",
+							"value": "date",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sortType",
+							"value": "desc",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Search With Fiteration and Sorting"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/",
+			"request": {
+				"url": "http://localhost:8000/api/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "List All Records"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/",
+			"request": {
+				"url": "http://localhost:8000/api/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\": \"18/02/2019\",\n\t\"title\": \"ManonNiazi\",\n\t\"shortDescription\": \"She is from Germany and I want to go there\",\n\t\"text\": \"I want to marry Manon Niazi\"\n}"
+				},
+				"description": "Create a New Record"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/1",
+			"request": {
+				"url": "http://localhost:8000/api/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get 1 Record"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/1",
+			"request": {
+				"url": "http://localhost:8000/api/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"12/02/2019\",\n    \"title\": \"ManonNiazii\",\n\t\"shortDescription\": \"She is from Germany and I want to marry her or I stay alone\",\n    \"text\": \"I want to marry Manon Niazi\",\n    \"id\": \"1\"\n}"
+				},
+				"description": "Update 1 Record"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/6",
+			"request": {
+				"url": "http://localhost:8000/api/6",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Delete One Record"
+			},
+			"response": []
+		}
+	]
+}
